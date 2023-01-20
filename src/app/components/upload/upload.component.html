@@ -1,0 +1,12 @@
+<div
+  appUploadzone
+  (hovered)="toggleHover($event)"
+  (dropped)="startUpload($event)"
+  [class.hovering]="isHovering"
+>
+<div>Drag and drop a file</div>
+<div>
+    <label for="file"></label>
+    <input type="file" (change)="startUpload($event)">
+</div>
+</div>
