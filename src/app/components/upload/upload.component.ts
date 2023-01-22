@@ -17,9 +17,12 @@ export class UploadComponent implements OnInit {
   }
 
   startUpload(event: any | FileList) {
-    console.log(event);
-    const file = event.item(0);
-    console.log(file);
+    if (event.type === "change") {
+      console.log("file selected");
+    } else {
+      console.log("file dropped");
+    }
+    //const file = event.item(0);
 
     // if (file?.type.split('/')[0] === 'video') {
     //   console.error('video files are not supported');

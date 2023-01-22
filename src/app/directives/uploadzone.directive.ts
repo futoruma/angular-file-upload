@@ -12,7 +12,7 @@ export class UploadzoneDirective {
   @HostListener('drop', ['$event'])
   onDrop($event: any) {
     $event.preventDefault();
-    this.dropped.emit($event.dataTransfer.files);
+    this.dropped.emit($event);
     this.hovered.emit(false);
   }
 
