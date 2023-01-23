@@ -16,13 +16,14 @@ export class UploadComponent implements OnInit {
     this.isHovering = event;
   }
 
-  startUpload(event: any | FileList) {
+  startUpload(event: any) {
+    let curFile;
     if (event.type === "change") {
-      console.log("file selected");
+      curFile = event.target.files[0];
     } else {
-      console.log("file dropped");
+      curFile = event.dataTransfer.files[0];
     }
-    //const file = event.item(0);
+    console.log(curFile);
 
     // if (file?.type.split('/')[0] === 'video') {
     //   console.error('video files are not supported');
