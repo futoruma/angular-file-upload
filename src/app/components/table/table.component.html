@@ -1,22 +1,16 @@
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8 w-96">
-  <!-- Name Column -->
-  <ng-container matColumnDef="name">
-    <th mat-header-cell *matHeaderCellDef>Name</th>
-    <td mat-cell *matCellDef="let file">{{ file.name }}</td>
-  </ng-container>
-
-  <!-- Type Column -->
-  <ng-container matColumnDef="type">
-    <th mat-header-cell *matHeaderCellDef>Type</th>
-    <td mat-cell *matCellDef="let file">{{ file.type }}</td>
-  </ng-container>
-
-  <!-- Size Column -->
-  <ng-container matColumnDef="size">
-    <th mat-header-cell *matHeaderCellDef>Size</th>
-    <td mat-cell *matCellDef="let file">{{ file.size }}</td>
-  </ng-container>
-
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+<table class="w-96">
+  <thead class="bg-gray-800 text-gray-100 text-base text-center">
+      <tr>
+          <th class="w-32">Name</th>
+          <th class="w-32">Type</th>
+          <th class="w-32">Size</th>
+      </tr>
+  </thead>
+  <tbody class="border-2 text-center">
+      <tr *ngFor="let file of uploadedFiles">
+          <td>{{file.name}}</td>
+          <td>{{file.type}}</td>
+          <td>{{file.size}} bytes</td>
+      </tr>
+  </tbody>
 </table>

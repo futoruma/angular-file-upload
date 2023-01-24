@@ -8,8 +8,9 @@
   >
     <div class="text-lg select-none">Drag and drop a file</div>
 
-    <div class="w-60">
-      <mat-progress-bar mode="determinate" value="10"></mat-progress-bar>
+    <div [ngSwitch]="isUploading" class="w-60">
+      <mat-progress-bar *ngSwitchCase="true" mode="indeterminate"></mat-progress-bar>
+      <mat-progress-bar *ngSwitchCase="false" mode="determinate"></mat-progress-bar>
     </div>
 
     <div class="flex flex-col items-center mt-3">
@@ -19,6 +20,8 @@
   </div>
 
   <div class="mt-6">
-    <app-table></app-table>
+    <app-table
+      [uploadedFiles]="uploadedFiles">
+    </app-table>
   </div>
 </div>

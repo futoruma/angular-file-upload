@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { MatTableModule } from '@angular/material/table';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -20,8 +19,7 @@ import { TableComponent } from './components/table/table.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatProgressBarModule,
-    MatTableModule
+    MatProgressBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
