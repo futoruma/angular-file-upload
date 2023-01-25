@@ -34,12 +34,6 @@ export class UploadComponent implements OnInit {
         type: curFile.type,
         size: curFile.size
       })
-    }, 1500)
-
-    // if (file?.type.split('/')[0] === 'video') {
-    //   console.error('video files are not supported');
-    // }
-
-    // const path = `test/${new Date().getTime()}_${file?.name}`;
+    }, 1200)
   }
 }

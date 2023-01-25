@@ -10,7 +10,7 @@
       <tr *ngFor="let file of uploadedFiles">
           <td>{{file.name}}</td>
           <td>{{file.type}}</td>
-          <td>{{file.size}} bytes</td>
+          <td>{{file.size | formatFileSize}}</td>
       </tr>
   </tbody>
 </table>

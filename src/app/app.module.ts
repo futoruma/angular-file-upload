@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 
+import { FormatFileSizePipe } from './pipes/formatFileSize.pipe';
+
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UploadzoneDirective } from './directives/uploadzone.directive';
@@ -14,7 +16,8 @@ import { TableComponent } from './components/table/table.component';
     AppComponent,
     UploadzoneDirective,
     UploadComponent,
-    TableComponent
+    TableComponent,
+    FormatFileSizePipe
   ],
   imports: [
     BrowserModule,
