@@ -6,16 +6,16 @@
     (dropped)="startUpload($event)"
     [ngClass]="{ 'bg-gray-100': isHovering }"
   >
-    <div class="text-lg select-none">Drag and drop a file</div>
+    <div class="text-lg select-none">Drag and drop file(s)</div>
 
-    <div [ngSwitch]="isUploading" class="w-60">
+    <div [ngSwitch]="isUploading" class="w-60 h-6">
       <mat-progress-bar *ngSwitchCase="true" mode="indeterminate"></mat-progress-bar>
-      <mat-progress-bar *ngSwitchCase="false" mode="determinate"></mat-progress-bar>
+      <div *ngSwitchCase="false" class="text-center">or</div>
     </div>
 
     <div class="flex flex-col items-center mt-3">
       <label for="file"></label>
-      <input type="file" (change)="startUpload($event)" />
+      <input type="file" (change)="startUpload($event)" multiple/>
     </div>
   </div>
 
