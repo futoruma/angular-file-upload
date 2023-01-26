@@ -1,13 +1,13 @@
 import { Directive, HostListener, Output, EventEmitter } from '@angular/core';
 
 @Directive({
-  selector: '[appUploadzone]'
+  selector: '[appUploadzone]',
 })
 export class UploadzoneDirective {
   @Output() dropped = new EventEmitter<FileList>();
   @Output() hovered = new EventEmitter<boolean>();
 
-  constructor() { }
+  constructor() {}
 
   @HostListener('drop', ['$event'])
   onDrop($event: any) {
@@ -27,5 +27,4 @@ export class UploadzoneDirective {
     $event.preventDefault();
     this.hovered.emit(false);
   }
-
 }

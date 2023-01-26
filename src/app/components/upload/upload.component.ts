@@ -22,11 +22,11 @@ export class UploadComponent implements OnInit {
   startUpload(event: any) {
     this.isUploading = true;
     let curFileList: FileList;
-    if (event.type === "change") {
+    if (event.type === 'change') {
       curFileList = event.target.files;
     } else {
       curFileList = event.dataTransfer.files;
-    };
+    }
 
     for (let i = 0; i < curFileList.length; i++) {
       setTimeout(() => {
@@ -34,9 +34,9 @@ export class UploadComponent implements OnInit {
         this.uploadedFiles.push({
           name: curFileList[i].name,
           type: curFileList[i].type,
-          size: curFileList[i].size
-        })
-      }, (i + 1) *1000)
+          size: curFileList[i].size,
+        });
+      }, (i + 1) * 500);
     }
   }
 }

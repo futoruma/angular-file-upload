@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { MatButtonModule } from '@angular/material/button';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 import { FormatFileSizePipe } from './pipes/formatFileSize.pipe';
@@ -22,6 +23,7 @@ import { TableComponent } from './components/table/table.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    MatButtonModule,
     MatProgressBarModule
   ],
   providers: [],

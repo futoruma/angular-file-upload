@@ -1,16 +1,16 @@
 <table class="w-96">
-  <thead class="bg-gray-800 text-gray-100 text-base text-center">
-      <tr>
-          <th class="w-32">Name</th>
-          <th class="w-32">Type</th>
-          <th class="w-32">Size</th>
-      </tr>
+  <thead class="bg-gray-800 text-gray-200 text-base text-center">
+    <tr>
+      <th class="w-32">Name</th>
+      <th class="w-32">Type</th>
+      <th class="w-32">Size</th>
+    </tr>
   </thead>
   <tbody class="border-2 text-center">
-      <tr *ngFor="let file of uploadedFiles">
-          <td>{{file.name}}</td>
-          <td>{{file.type}}</td>
-          <td>{{file.size | formatFileSize}}</td>
-      </tr>
+    <tr *ngFor="let file of uploadedFiles">
+      <td>{{ file.name }}</td>
+      <td>{{ file.type }}</td>
+      <td>{{ file.size | formatFileSize }}</td>
+    </tr>
   </tbody>
 </table>
